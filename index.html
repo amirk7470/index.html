@@ -35,11 +35,17 @@
       color: var(--text-main);
       line-height: 1.6;
       overflow-x: hidden;
-      selection-background-color: var(--accent);
-      selection-color: #fff;
     }
 
-    /* Ambient Background Glow */
+    .cite-hidden {
+      display: none !important;
+      visibility: hidden !important;
+      font-size: 0 !important;
+      line-height: 0 !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+
     .bg-gradient {
       position: fixed;
       top: 0;
@@ -53,14 +59,12 @@
       z-index: -1;
     }
 
-    /* Container */
     .container {
       max-width: 1100px;
       margin: 0 auto;
       padding: 0 24px;
     }
 
-    /* Navigation */
     nav {
       position: sticky;
       top: 0;
@@ -125,7 +129,6 @@
       transform: translateY(-1px);
     }
 
-    /* Hero Section */
     .hero {
       padding: 80px 0 60px;
     }
@@ -226,6 +229,7 @@
       align-items: center;
       gap: 8px;
       transition: all 0.2s ease;
+      cursor: pointer;
     }
 
     .btn-secondary:hover {
@@ -233,7 +237,6 @@
       border-color: rgba(255, 255, 255, 0.2);
     }
 
-    /* Photo Card */
     .profile-card-wrapper {
       position: relative;
       display: flex;
@@ -243,22 +246,23 @@
     .profile-card {
       position: relative;
       width: 100%;
-      max-width: 380px;
+      max-width: 320px;
       aspect-ratio: 4/5;
-      border-radius: 24px;
-      padding: 10px;
-      background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+      border-radius: 22px;
+      padding: 8px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02));
       border: 1px solid var(--card-border);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.5);
     }
 
     .profile-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: top;
-      border-radius: 18px;
+      object-position: center 20%;
+      border-radius: 16px;
       display: block;
+      background-color: #1e293b;
     }
 
     .profile-floating-badge {
@@ -279,7 +283,6 @@
       font-weight: 600;
     }
 
-    /* Metric Counters */
     .metrics-section {
       padding: 40px 0 60px;
     }
@@ -319,7 +322,6 @@
       font-weight: 500;
     }
 
-    /* Section Headers */
     .section-header {
       margin-bottom: 36px;
     }
@@ -340,7 +342,6 @@
       letter-spacing: -0.5px;
     }
 
-    /* Experience Timeline */
     .experience-section {
       padding: 50px 0;
     }
@@ -418,7 +419,6 @@
       font-weight: bold;
     }
 
-    /* Skills Grid */
     .skills-section {
       padding: 50px 0;
     }
@@ -476,7 +476,6 @@
       font-weight: 600;
     }
 
-    /* Recruiter Quick Actions */
     .recruiter-cta {
       padding: 70px 0 90px;
     }
@@ -532,7 +531,6 @@
       color: #fff;
     }
 
-    /* Toast Notification */
     .toast {
       position: fixed;
       bottom: 24px;
@@ -554,7 +552,6 @@
       opacity: 1;
     }
 
-    /* Footer */
     footer {
       border-top: 1px solid var(--card-border);
       padding: 30px 0;
@@ -563,7 +560,6 @@
       font-size: 0.85rem;
     }
 
-    /* Responsive */
     @media (max-width: 860px) {
       .hero-grid {
         grid-template-columns: 1fr;
@@ -579,7 +575,7 @@
         order: -1;
       }
       .profile-card {
-        max-width: 280px;
+        max-width: 270px;
       }
       .metrics-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -624,7 +620,7 @@
           Bridging Operations with <span class="gradient-text">AI Automation</span>
         </h1>
         <p class="hero-subtitle">
-          Over 4 years of proven operations experience across JPMorgan Chase (Client via JLL), Retail EZ, and Flipkart. Specializing in high-stakes Third-Party Risk Management (TPRM), Procure-to-Pay (P2P), and engineering AI-assisted workflows using Python, LLMs, and modern automation.
+          Over 4 years of proven operations experience across JPMorgan Chase (Client via JLL), Retail EZ, and Flipkart<span class="cite-hidden">[cite: 1]</span>. Specializing in high-stakes Third-Party Risk Management (TPRM), Procure-to-Pay (P2P), and engineering AI-assisted workflows using Python, LLMs, and modern automation<span class="cite-hidden">[cite: 1, 2]</span>.
         </p>
         <div class="hero-actions">
           <a href="mailto:amirkhan9453480248@gmail.com" class="btn-primary">
@@ -638,12 +634,13 @@
         </div>
       </div>
 
+      <!-- Profile Image Card -->
       <div class="profile-card-wrapper">
         <div class="profile-card">
         <img src="https://i.ibb.co/rKNpWwp4/profile.png" alt="Amir Khan Portrait" class="profile-img" />
           <div class="profile-floating-badge">
             <svg width="18" height="18" fill="#10b981" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-            Bengaluru, Karnataka (IN)
+            Bengaluru, Karnataka (IN)<span class="cite-hidden">[cite: 1]</span>
           </div>
         </div>
       </div>
@@ -656,19 +653,19 @@
       <div class="metrics-grid">
         <div class="metric-card">
           <div class="metric-num">4+</div>
-          <div class="metric-label">Years Cross-Functional Operations</div>
+          <div class="metric-label">Years Cross-Functional Operations<span class="cite-hidden">[cite: 1]</span></div>
         </div>
         <div class="metric-card">
           <div class="metric-num">Top 2</div>
-          <div class="metric-label">AI Spark Award Finalist</div>
+          <div class="metric-label">AI Spark Award Finalist<span class="cite-hidden">[cite: 1]</span></div>
         </div>
         <div class="metric-card">
           <div class="metric-num">+20%</div>
-          <div class="metric-label">Brand Visibility Growth Achieved</div>
+          <div class="metric-label">Brand Visibility Growth Achieved<span class="cite-hidden">[cite: 1]</span></div>
         </div>
         <div class="metric-card">
           <div class="metric-num">+15%</div>
-          <div class="metric-label">Process Efficiency Improvement</div>
+          <div class="metric-label">Process Efficiency Improvement<span class="cite-hidden">[cite: 1]</span></div>
         </div>
       </div>
     </div>
@@ -683,67 +680,63 @@
       </div>
 
       <div class="timeline">
-        <!-- Role 1 -->
         <div class="timeline-item">
           <div class="item-header">
             <div>
               <h3 class="role-title">Vendor Management Office (VMO) Associate</h3>
-              <p class="role-company">Jones Lang LaSalle (JLL) / JPMorgan Chase (Client)</p>
+              <p class="role-company">Jones Lang LaSalle (JLL) / JPMorgan Chase (Client)<span class="cite-hidden">[cite: 1]</span></p>
             </div>
-            <div class="role-meta">Dec 2025 – Present</div>
+            <div class="role-meta">Dec 2025 – Present<span class="cite-hidden">[cite: 1]</span></div>
           </div>
           <ul class="item-bullet-list">
-            <li>Direct end-to-end supplier onboarding, recertification, purchase orders (POs), and payment processing within an institutional banking setup.</li>
-            <li>Enforce strict Third-Party Risk Management (TPRM) protocols, regulatory audits, and internal governance frameworks.</li>
-            <li>Architect real-time KPI dashboards and operational databases to resolve cross-team processing bottlenecks.</li>
-            <li>Develop custom AI workflow automation models to cut turnaround times and preserve operational bandwidth.</li>
-            <li>Shortlisted as a finalist in the internal <strong>AI Spark competition</strong> for conceptualizing generative AI process tools.</li>
+            <li>Direct end-to-end supplier onboarding, recertification, purchase orders (POs), and payment processing within an institutional banking setup<span class="cite-hidden">[cite: 1]</span>.</li>
+            <li>Enforce strict Third-Party Risk Management (TPRM) protocols, regulatory audits, and internal governance frameworks<span class="cite-hidden">[cite: 1]</span>.</li>
+            <li>Architect real-time KPI dashboards and operational databases to resolve cross-team processing bottlenecks<span class="cite-hidden">[cite: 1]</span>.</li>
+            <li>Develop custom AI workflow automation models to cut turnaround times and preserve operational bandwidth<span class="cite-hidden">[cite: 1]</span>.</li>
+            <li>Shortlisted as a finalist in the internal <strong>AI Spark competition</strong> for conceptualizing generative AI process tools<span class="cite-hidden">[cite: 1]</span>.</li>
           </ul>
         </div>
 
-        <!-- Role 2 -->
         <div class="timeline-item">
           <div class="item-header">
             <div>
               <h3 class="role-title">Vendor Operation Executive</h3>
-              <p class="role-company">Retail EZ Private Brands</p>
+              <p class="role-company">Retail EZ Private Brands<span class="cite-hidden">[cite: 1]</span></p>
             </div>
             <div class="role-meta">Dec 2023 – Dec 2025</div>
           </div>
           <ul class="item-bullet-list">
-            <li>Spearheaded vendor lifecycle integration, SLA adherence, and compliance protocols across multi-category partner brands.</li>
-            <li>Leveraged pricing data analysis and catalog audits to eliminate SKU suppression and optimize cost efficiency.</li>
-            <li>Formulated tailored deal creation architectures and monitored clearance velocity to boost revenue throughput.</li>
+            <li>Spearheaded vendor lifecycle integration, SLA adherence, and compliance protocols across multi-category partner brands<span class="cite-hidden">[cite: 1]</span>.</li>
+            <li>Leveraged pricing data analysis and catalog audits to eliminate SKU suppression and optimize cost efficiency<span class="cite-hidden">[cite: 1]</span>.</li>
+            <li>Formulated tailored deal creation architectures and monitored clearance velocity to boost revenue throughput<span class="cite-hidden">[cite: 1]</span>.</li>
           </ul>
         </div>
 
-        <!-- Role 3 -->
         <div class="timeline-item">
           <div class="item-header">
             <div>
               <h3 class="role-title">Senior Vendor Operations Associate</h3>
-              <p class="role-company">COCOBLU</p>
+              <p class="role-company">COCOBLU<span class="cite-hidden">[cite: 1]</span></p>
             </div>
-            <div class="role-meta">May 2022 – Dec 2023</div>
+            <div class="role-meta">May 2022 – Dec 2023<span class="cite-hidden">[cite: 1]</span></div>
           </div>
           <ul class="item-bullet-list">
-            <li>Elevated brand engagement and visibility by 20% through data-driven operational campaigns and competitive intelligence.</li>
-            <li>Boosted overall workflow efficiency by 15% through SOP redesign, reporting automation, and process re-engineering.</li>
+            <li>Elevated brand engagement and visibility by 20% through data-driven operational campaigns and competitive intelligence<span class="cite-hidden">[cite: 1]</span>.</li>
+            <li>Boosted overall workflow efficiency by 15% through SOP redesign, reporting automation, and process re-engineering<span class="cite-hidden">[cite: 1]</span>.</li>
           </ul>
         </div>
 
-        <!-- Role 4 -->
         <div class="timeline-item">
           <div class="item-header">
             <div>
               <h3 class="role-title">Operations Associate</h3>
-              <p class="role-company">Flipkart</p>
+              <p class="role-company">Flipkart<span class="cite-hidden">[cite: 1]</span></p>
             </div>
-            <div class="role-meta">Aug 2021 – May 2022</div>
+            <div class="role-meta">Aug 2021 – May 2022<span class="cite-hidden">[cite: 1]</span></div>
           </div>
           <ul class="item-bullet-list">
-            <li>Managed and resolved critical CEO-level escalations through rapid cross-functional incident response and root-cause analysis.</li>
-            <li>Implemented catalog data quality improvements directly influencing customer discovery and conversion.</li>
+            <li>Managed and resolved critical CEO-level escalations through rapid cross-functional incident response and root-cause analysis<span class="cite-hidden">[cite: 1]</span>.</li>
+            <li>Implemented catalog data quality improvements directly influencing customer discovery and conversion<span class="cite-hidden">[cite: 1]</span>.</li>
           </ul>
         </div>
       </div>
@@ -770,7 +763,7 @@
             <span class="skill-tag highlight">Vibe Coding (AI-Assisted Dev)</span>
             <span class="skill-tag">Neural Networks</span>
             <span class="skill-tag">Structured Learning</span>
-            <span class="skill-tag">AI Workflow Automation</span>
+            <span class="skill-tag">AI Workflow Automation<span class="cite-hidden">[cite: 1, 2]</span></span>
           </div>
         </div>
 
@@ -781,11 +774,11 @@
           </h3>
           <div class="tags-container">
             <span class="skill-tag highlight">Python with AI</span>
-            <span class="skill-tag">SQL</span>
-            <span class="skill-tag">Relational Database Design</span>
-            <span class="skill-tag">Real-Time Dashboards</span>
-            <span class="skill-tag">Data Extraction</span>
-            <span class="skill-tag">Advanced Excel Analytics</span>
+            <span class="skill-tag">SQL<span class="cite-hidden">[cite: 1, 2]</span></span>
+            <span class="skill-tag">Relational Database Design<span class="cite-hidden">[cite: 2]</span></span>
+            <span class="skill-tag">Real-Time Dashboards<span class="cite-hidden">[cite: 2]</span></span>
+            <span class="skill-tag">Data Extraction<span class="cite-hidden">[cite: 2]</span></span>
+            <span class="skill-tag">Advanced Excel Analytics<span class="cite-hidden">[cite: 2]</span></span>
           </div>
         </div>
 
@@ -795,12 +788,12 @@
             Vendor Risk & Governance
           </h3>
           <div class="tags-container">
-            <span class="skill-tag">Third-Party Risk (TPRM)</span>
-            <span class="skill-tag">Procure-to-Pay (P2P)</span>
-            <span class="skill-tag">Supplier Performance (SPM)</span>
-            <span class="skill-tag">Compliance & Risk Audits</span>
-            <span class="skill-tag">SLA / KPI Governance</span>
-            <span class="skill-tag">High-Aging Escalation Resolution</span>
+            <span class="skill-tag">Third-Party Risk (TPRM)<span class="cite-hidden">[cite: 1]</span></span>
+            <span class="skill-tag">Procure-to-Pay (P2P)<span class="cite-hidden">[cite: 1]</span></span>
+            <span class="skill-tag">Supplier Performance (SPM)<span class="cite-hidden">[cite: 1]</span></span>
+            <span class="skill-tag">Compliance & Risk Audits<span class="cite-hidden">[cite: 1]</span></span>
+            <span class="skill-tag">SLA / KPI Governance<span class="cite-hidden">[cite: 1]</span></span>
+            <span class="skill-tag">High-Aging Escalation Resolution<span class="cite-hidden">[cite: 1]</span></span>
           </div>
         </div>
 
@@ -810,10 +803,10 @@
             Strategic Operations
           </h3>
           <div class="tags-container">
-            <span class="skill-tag">E-commerce Operations</span>
-            <span class="skill-tag">Process Re-engineering</span>
-            <span class="skill-tag">Cost Optimization</span>
-            <span class="skill-tag">Crisis Continuity Management</span>
+            <span class="skill-tag">E-commerce Operations<span class="cite-hidden">[cite: 2]</span></span>
+            <span class="skill-tag">Process Re-engineering<span class="cite-hidden">[cite: 2]</span></span>
+            <span class="skill-tag">Cost Optimization<span class="cite-hidden">[cite: 2]</span></span>
+            <span class="skill-tag">Crisis Continuity Management<span class="cite-hidden">[cite: 2]</span></span>
             <span class="skill-tag">Cross-Functional Leadership</span>
           </div>
         </div>
@@ -831,11 +824,11 @@
         <div class="contact-details">
           <a href="mailto:amirkhan9453480248@gmail.com" class="contact-item">
             <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-            amirkhan9453480248@gmail.com
+            amirkhan9453480248@gmail.com<span class="cite-hidden">[cite: 1]</span>
           </a>
           <a href="tel:+918114094077" class="contact-item">
             <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-            +91 8114094077
+            +91 8114094077<span class="cite-hidden">[cite: 1]</span>
           </a>
         </div>
 
@@ -863,6 +856,11 @@
         setTimeout(() => toast.classList.remove("show"), 2500);
       });
     }
+
+    // Automatically remove citation nodes from the DOM
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('.cite-hidden').forEach(el => el.remove());
+    });
   </script>
 </body>
 </html>
